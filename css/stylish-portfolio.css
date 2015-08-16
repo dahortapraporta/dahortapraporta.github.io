@@ -299,3 +299,16 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+
+/* FORM */
+
+.has-error .form-control{
+    border: 0;
+    background-color: #DAC8A7;
+}
+
+.has-error .help-block{
+    text-align: left;
+    color: #DA7139;
+}
