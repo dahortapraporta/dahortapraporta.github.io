@@ -76,7 +76,7 @@
                             <a href="#" class="select-kit" data-target="Field1">
                                 <img class="img-responsive" src="img/kit.jpg">
                                 <div class="btn btn-lg btn-dark"><i class="fa fa-check-circle"></i> Encomendar por R$ 20,00</div>
-                            </a>                        
+                            </a>
                         </div>
                         <div class="col-md-6">
                             <h3>Horti-Fruti Kit (Kit 1)</h3>
@@ -101,7 +101,7 @@
                             <a href="#" class="select-kit" data-target="Field2">
                                 <img class="img-responsive" src="img/kit02.jpg">
                                 <div class="btn btn-lg btn-dark"><i class="fa fa-check-circle"></i> Encomendar por R$ 12,00</div>
-                            </a>                        
+                            </a>
                         </div>
                         <div class="col-md-6">
                             <h3>Fruti-Kit (Kit 2)</h3>
@@ -132,12 +132,12 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <form id="form1" name="form1" class="form-horizontal" accept-charset="UTF-8" autocomplete="off" method="post"
-                        action="https://hortanaporta.wufoo.com/forms/z1op3mfq1uatyml/#public">
+                        action="https://hortanaporta.wufoo.com/forms/z1op3mfq1uatyml/#public" data-toggle="validator">
                         <div class="hidden">
                             <input id="Field1" name="Field1" type="checkbox" class="field checkbox" value="Kit 1" tabindex="1"     />
                             <label class="choice" for="Field1">Kit 1</label>
                             <input id="Field2" name="Field2" type="checkbox" class="field checkbox" value="Kit 2" tabindex="2"     />
-                            <label class="choice" for="Field2">Kit 2</label>                            
+                            <label class="choice" for="Field2">Kit 2</label>
 -                           <input type="hidden" id="idstamp" name="idstamp" value="dOP9BAFwK95Bv7W659YG2bqAvI59KsSqa5J7U4zuvqI=" />
                         </div>
                         <div class="form-group">
@@ -146,6 +146,7 @@
                             </div>
                             <div class="col-sm-11">
                                 <input id="Field106" type="text" name="Field106" class="form-control" placeholder="Fulano de Tal" required>
+                                <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -154,6 +155,7 @@
                             </div>
                             <div class="col-sm-11">
                                 <input type="email" name="Field104" id="Field104" class="form-control" placeholder="seu@email.com" required>
+                                <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -162,6 +164,7 @@
                             </div>
                             <div class="col-sm-11">
                                 <input type="tel" name="Field103" id="Field103" class="form-control" placeholder="(xx) xxxx xxxx" required>
+                                <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <button type="submit" id="submit-btn" class="btn btn-lg btn-light">Enviar Pedido</button>
@@ -207,6 +210,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap validator -->
+    <script src="js/bootstrap.validator.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
