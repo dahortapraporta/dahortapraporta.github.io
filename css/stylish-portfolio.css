@@ -243,13 +243,21 @@ hr.small {
     border: 2px solid transparent;
 }
 
-.select-kit:hover img{
+.select-kit:hover img, .select-kit.selected img{
     border: 2px solid rgb(65, 116, 71);
 }
 
 .select-kit .btn{
     position: absolute;
     bottom: 0;
+}
+
+.select-kit .fa-check-circle{
+    display: none;
+}
+
+.select-kit.selected .fa-check-circle{
+    display: inline;   
 }
 
 .img-portfolio {

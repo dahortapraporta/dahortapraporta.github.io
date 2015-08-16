@@ -73,9 +73,9 @@
                     <hr class="small">
                     <div class="row portfolio-item">
                         <div class="col-md-6">
-                            <a href="#" class="select-kit">
+                            <a href="#" class="select-kit" data-target="Field1">
                                 <img class="img-responsive" src="img/kit.jpg">
-                                <div class="btn btn-lg btn-dark">Encomendar por R$ 20,00</div>
+                                <div class="btn btn-lg btn-dark"><i class="fa fa-check-circle"></i> Encomendar por R$ 20,00</div>
                             </a>                        
                         </div>
                         <div class="col-md-6">
@@ -98,9 +98,9 @@
                     <hr class="small">
                     <div class="row portfolio-item">
                         <div class="col-md-6">
-                            <a href="#" class="select-kit">
+                            <a href="#" class="select-kit" data-target="Field2">
                                 <img class="img-responsive" src="img/kit02.jpg">
-                                <div class="btn btn-lg btn-dark">Encomendar por R$ 12,00</div>
+                                <div class="btn btn-lg btn-dark"><i class="fa fa-check-circle"></i> Encomendar por R$ 12,00</div>
                             </a>                        
                         </div>
                         <div class="col-md-6">
@@ -137,9 +137,8 @@
                             <input id="Field1" name="Field1" type="checkbox" class="field checkbox" value="Kit 1" tabindex="1"     />
                             <label class="choice" for="Field1">Kit 1</label>
                             <input id="Field2" name="Field2" type="checkbox" class="field checkbox" value="Kit 2" tabindex="2"     />
-                            <label class="choice" for="Field2">Kit 2</label>
-                            <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-                            <input type="hidden" id="idstamp" name="idstamp" value="dOP9BAFwK95Bv7W659YG2bqAvI59KsSqa5J7U4zuvqI=" />
+                            <label class="choice" for="Field2">Kit 2</label>                            
+-                           <input type="hidden" id="idstamp" name="idstamp" value="dOP9BAFwK95Bv7W659YG2bqAvI59KsSqa5J7U4zuvqI=" />
                         </div>
                         <div class="form-group">
                             <div class="col-sm-1">
@@ -165,8 +164,8 @@
                                 <input type="tel" name="Field103" id="Field103" class="form-control" placeholder="(xx) xxxx xxxx" required>
                             </div>
                         </div>
+                        <button type="submit" id="submit-btn" class="btn btn-lg btn-light">Enviar Pedido</button>
                     </form>
-                    <button type="submit" id="submit-btn" class="btn btn-lg btn-light">Pedir!</button>
                 </div>
             </div>
         </div>
@@ -238,12 +237,16 @@
                 }
             }
         });
+
+        $('.select-kit').click(function(e) {
+            e.preventDefault();
+            var $link = $(this);
+            $link.toggleClass("selected");
+            var $check = $("#" + $link.data('target'));
+            $check.prop("checked", !$check.prop("checked"));
+        });
     });
 
-    $('#submit-btn').click(function (e) {
-
-        $('#form1').submit();
-    });
     </script>
 
     <script type="text/javascript">var z1op3mfq1uatyml;(function(d, t) {
